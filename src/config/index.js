@@ -1,6 +1,10 @@
+
+require('dotenv').config();
 const express= require('express');
 const app = express();
-const PORT = 3080;
+
+// database configration
+require('./database');
 
 
-app.listen(PORT,console.log(`server run on port ${PORT}`));
+app.listen(process.env.PORT,console.log(`server run on port ${process.env.PORT}`));

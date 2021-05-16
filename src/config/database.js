@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://purshotam_8210:<purshotam_8210>@cluster0.w275e.mongodb.net/wedapi?retryWrites=true&w=majority',{
+mongoose.connect(process.env.MONGODB_CONNECTION_URL,{
     useFindAndModify:false,
     useNewUrlParser:true,
     useUnifiedTopology:true,
